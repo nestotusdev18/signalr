@@ -40,8 +40,12 @@
 		console.log(this.state.current_data);
 		 var button_name = "Submit";
 			
+		 var color_class = "#30bea1";
 		 
 		 var allProfiles = Object.values(this.state.current_data).map((value) => {
+			 
+		
+			 
 			 return (
 					<div className="row">
 					   <div className="col-md-12">
@@ -50,8 +54,6 @@
 								<div className="cardcontainer">
 								   <div className="row">
 									  <div className="col-md-12 cardpad">
-										
-								
 										
 										<div className="col-md-2 imgdiv"  style={{background: '#30bea1'}}>
 										
