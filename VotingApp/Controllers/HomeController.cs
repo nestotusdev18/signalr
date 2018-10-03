@@ -9,7 +9,7 @@ namespace VotingApp.Controllers
 {
     public class HomeController : Controller
     {
-        public IEnumerable<Dashboard> DataObject { get; private set; }
+        public List<Dashboard> DataObject { get; private set; }
 
         public ActionResult Index()
         {
@@ -19,21 +19,11 @@ namespace VotingApp.Controllers
         public JsonResult Datacount()
         {
             DataRepository cmd = new DataRepository();
-            DataObject = cmd.GetData();
+            DataObject = cmd.GetDashboard();
             return Json(DataObject, JsonRequestBehavior.AllowGet);
         }
 
-
-        public JsonResult SurveyQuiz()
-        {
-            var poll = new
-            {
-                question = "Which is your favourite fruit?",
-                choices = VotingHub.poll.Select(x => new { name = x.Key, count = x.Value }).ToList()
-            };
-            return Json(poll, JsonRequestBehavior.AllowGet);
-        }
-
+        
         public ActionResult Dashboard()
         {
             return View();
