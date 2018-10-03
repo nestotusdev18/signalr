@@ -18,7 +18,7 @@ namespace VotingApp.Models
             using (var connection = new SqlConnection(@"Data Source=DESKTOP-AQ0H8S4\SQLEXPRESS;Initial Catalog=SignalR;Integrated Security=True;"))
             {
                 connection.Open();
-                using (var command = new SqlCommand("SELECT * FROM ObjectInfo", connection))
+                using (var command = new SqlCommand("SELECT * FROM ObjectInfo ", connection))
                 {
                      SqlDataReader reader;
                      reader = command.ExecuteReader();
@@ -27,7 +27,7 @@ namespace VotingApp.Models
                         Dashboard obj = new Dashboard();
                         obj.FloorName = (string)reader["FloorName"];
                         obj.UniqueId = (int)reader["UniqueId"];
-                        obj.RoomType = (int)reader["RoomType"];
+                        obj.RoomType = (int)(byte)reader["RoomType"];
                         obj.IsEmergency = (bool)reader["IsEmergency"];
                         obj.CurrentCount = (int)reader["CurrentCount"];
                         obj.LongStay = (int)reader["LongStay"];

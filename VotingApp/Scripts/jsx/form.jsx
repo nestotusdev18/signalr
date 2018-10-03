@@ -39,6 +39,8 @@
         var self = this;
 		console.log(this.state.current_data);
 		 var button_name = "Submit";
+			
+		 
 		 var allProfiles = Object.values(this.state.current_data).map((value) => {
 			 return (
 					<div className="row">
@@ -48,8 +50,12 @@
 								<div className="cardcontainer">
 								   <div className="row">
 									  <div className="col-md-12 cardpad">
-										 <div className="col-md-2 imgdiv" style={{background: '#30bea1'}}>
-										 <img src="content/images/boy-icon.png"/>
+										
+								
+										
+										<div className="col-md-2 imgdiv"  style={{background: '#30bea1'}}>
+										
+										 <img src="../content/images/boy-icon.png"/>
 									  </div>
 									  <div className="col-md-4">
 										 <br/>
@@ -64,13 +70,13 @@
 									  </div>
 									  <div className="col-md-2">
 										 <div className="vl" align="center">
-											<h1 align="center" className="green">05<sub>+2</sub></h1>
+											<h1 align="center" className="green">{value.LongStay}<sub>+{value.LongRecent}</sub></h1>
 											<h5 align="center" className="long">Long Stay</h5>
 										 </div>
 									  </div>
 									  <div className="col-md-2">
 										 <div className="vl" align="center">
-											<h1 className="wrong" align="center">01<sub>+2</sub></h1>
+											<h1 className="wrong" align="center">{value.WrongPerson}<sub>+{value.WrongPersonRecent}</sub></h1>
 											<h5 align="center">Wrong Person</h5>
 										 </div>
 									  </div>
@@ -98,19 +104,19 @@
 									  </div>
 									  <div className="col-md-2">
 										 <div className="vl" align="center">
-											<h1 align="center" className="green">05<sub>+2</sub></h1>
+											<h1 align="center" className="green">{value.LongStay}<sub>+{value.LongRecent}</sub></h1>
 											<h5 align="center" className="long">Long Stay</h5>
 										 </div>
 									  </div>
 									  <div className="col-md-2">
 										 <div className="vl" align="center">
-											<h1 className="wrong" align="center">01<sub>+2</sub></h1>
+											<h1 className="wrong" align="center">{value.WrongPerson}<sub>+{value.WrongPersonRecent}</sub></h1>
 											<h5 align="center">Wrong Person</h5>
 										 </div>
 									  </div>
 								   </div>
-								   <div className="col-md-2 imgdiv" style={{background: '#30bea1'}}>
-								   <img src="content/images/girl-icon.png"/>
+								   <div className="col-md-2 imgdiv" style={{background: '#e94d66'}}>
+								   <img src="../content/images/girl-icon.png"/>
 								</div>
 							 </div>
 						  </div>
@@ -134,29 +140,106 @@
 						   <div className="cardcontainer">
 							  <h4 style={{}}>LIVE STREAM</h4>
 							  <hr/>
-							  <div className="m-timeline-2">
-								 <div className="m-timeline-2__items  m--padding-top-25 m--padding-bottom-30">
-									<div className="m-timeline-2__item">
-									   <span className="m-timeline-2__item-time">
-									   <b>Ground floor</b>
-									   </span>
-									   <div className="m-timeline-2__item-cricle">
-										  <i className="fa fa-circle" style={{color: '#30bea1'}}></i>
-									   </div>
-									   <div className="m-timeline-2__item-text  m--padding-top-5">
-										  Boys Long stay in Bath room
-										  <br/> 2mins ago
-									   </div>
-									</div>
-								 </div>
-							  </div>
+								  
+								  <div className="m-timeline-2">
+									 <div className="m-timeline-2__items  m--padding-top-25 m--padding-bottom-30">
+									 
+										
+										
+										<div className="m-timeline-2__item">
+										   <span className="m-timeline-2__item-time">
+										   <b>Ground floor</b>
+										   </span>
+										   <div className="m-timeline-2__item-cricle">
+											  <i className="fa fa-circle" style={{color: '#30bea1'}}></i>
+										   </div>
+										   <div className="m-timeline-2__item-text  m--padding-top-5">
+											  Boys Long stay in Bath room
+											  <br/> 2mins ago
+										   </div>
+										</div>
+										<div className="m-timeline-2__item m--margin-top-30">
+										   <span className="m-timeline-2__item-time">
+										   <b>Ground floor</b>
+										   </span>
+										   <div className="m-timeline-2__item-cricle">
+											  <i className="fa fa-circle" style={{color: '#30bea1'}}></i>
+										   </div>
+										   <div className="m-timeline-2__item-text  m--padding-top-5">
+											  Boys Long stay in Bath room
+											  <br/> 2mins ago
+										   </div>
+										</div>
+										<div className="m-timeline-2__item m--margin-top-30">
+										   <span className="m-timeline-2__item-time">
+										   <b>Ground floor</b>
+										   </span>
+										   <div className="m-timeline-2__item-cricle">
+											  <i className="fa fa-circle" style={{color: '#30bea1'}}></i>
+										   </div>
+										   <div className="m-timeline-2__item-text  m--padding-top-5">
+											  Boys Long stay in Bath room
+											  <br/> 2mins ago
+										   </div>
+										</div>
+										<div className="m-timeline-2__item m--margin-top-30">
+										   <span className="m-timeline-2__item-time">
+										   <b>Ground floor</b>
+										   </span>
+										   <div className="m-timeline-2__item-cricle">
+											  <i className="fa fa-circle" style={{color: '#30bea1'}}></i>
+										   </div>
+										   <div className="m-timeline-2__item-text  m--padding-top-5">
+											  Boys Long stay in Bath room
+											  <br/> 2mins ago
+										   </div>
+										</div>
+										<div className="m-timeline-2__item m--margin-top-30">
+										   <span className="m-timeline-2__item-time">
+										   <b>Ground floor</b>
+										   </span>
+										   <div className="m-timeline-2__item-cricle">
+											  <i className="fa fa-circle" style={{color: '#30bea1'}}></i>
+										   </div>
+										   <div className="m-timeline-2__item-text  m--padding-top-5">
+											  Boys Long stay in Bath room
+											  <br/> 2mins ago
+										   </div>
+										</div>
+										<div className="m-timeline-2__item m--margin-top-30">
+										   <span className="m-timeline-2__item-time">
+										   <b>Ground floor</b>
+										   </span>
+										   <div className="m-timeline-2__item-cricle">
+											  <i className="fa fa-circle" style={{color: '#30bea1'}}></i>
+										   </div>
+										   <div className="m-timeline-2__item-text  m--padding-top-5">
+											  Boys Long stay in Bath room
+											  <br/> 2mins ago
+										   </div>
+										</div>
+										<div className="m-timeline-2__item m--margin-top-30">
+										   <span className="m-timeline-2__item-time">
+										   <b>Ground floor</b>
+										   </span>
+										   <div className="m-timeline-2__item-cricle">
+											  <i className="fa fa-circle" style={{color: '#30bea1'}}></i>
+										   </div>
+										   <div className="m-timeline-2__item-text  m--padding-top-5">
+											  Boys Long stay in Bath room
+											  <br/> 2mins ago
+										   </div>
+										</div>
+										
+									 </div>
+								  </div>
 						   </div>
 						</div>
 					 </div>
 				  </div>
 			   </div>
 			   <div className="row">
-				  <div className="col-md-12">
+				  <div className="col-md-12  m--padding-top-25 " >
 					 <button id="submit" className="btn btn-default" onClick={this.handleSubmit}>{button_name}</button>    
 				  </div>
 			   </div>
