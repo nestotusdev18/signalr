@@ -3,9 +3,12 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soteria</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+    <title>Soteria Dev</title>
+        <link href="/Content/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="/Content/css/style.css" rel="stylesheet"/>
+
+ <script src="/Scripts/modernizr-2.6.2.js"></script>
+
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
@@ -15,9 +18,12 @@
         @RenderBody()
     </div>
 
-    @Scripts.Render("~/bundles/jquery")
-	@Scripts.Render("~/Content/js")
-    @Scripts.Render("~/bundles/bootstrap")
+    <script src="/Scripts/jquery-1.10.2.js"></script>
+
+	<script src="/Scripts/bootstrap.min.js"></script>
+
+    <script src="/Scripts/respond.js"></script>
+
     @RenderSection("scripts", required: false)
 
 </body>
