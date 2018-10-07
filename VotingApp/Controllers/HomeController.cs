@@ -23,7 +23,16 @@ namespace VotingApp.Controllers
             return Json(DataObject, JsonRequestBehavior.AllowGet);
         }
 
-        
+
+      
+
+        public ActionResult Crawl()
+        {
+            //VotingHub cmd = new VotingHub();
+            //cmd.Send();
+            return View();
+        }
+
         public ActionResult Dashboard()
         {
             return View();

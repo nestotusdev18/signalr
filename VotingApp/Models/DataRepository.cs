@@ -15,25 +15,24 @@ namespace VotingApp.Models
         public List<Dashboard> GetDashboard()
         {
             List<Dashboard> Dashboard = new List<Dashboard>();
-            using (var connection = new SqlConnection(@"Data Source=DESKTOP-AQ0H8S4\SQLEXPRESS;Initial Catalog=SignalR;Integrated Security=True;"))
+            using (var connection = new SqlConnection(ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString))
             {
                 connection.Open();
-                using (var command = new SqlCommand("SELECT * FROM ObjectInfo ", connection))
+                using (var command = new SqlCommand("SELECT * FROM  [dbo].[Activity.BathroomSummaryLog] ", connection))
                 {
                      SqlDataReader reader;
                      reader = command.ExecuteReader();
                     while (reader.Read())
                     {
                         Dashboard obj = new Dashboard();
-                        obj.FloorName = (string)reader["FloorName"];
-                        obj.UniqueId = (int)reader["UniqueId"];
-                        obj.RoomType = (int)(byte)reader["RoomType"];
-                        obj.IsEmergency = (bool)reader["IsEmergency"];
+                        obj.FloorName = (string)reader["BathroomName"];
+                        obj.UniqueId = (int)reader["UniqueVisitors"];
+                        obj.RoomType = (int)reader["RoomTypeID"];
                         obj.CurrentCount = (int)reader["CurrentCount"];
-                        obj.LongStay = (int)reader["LongStay"];
-                        obj.LongRecent = (int)reader["LongRecent"];
-                        obj.WrongPerson = (int)reader["WrongPerson"];
-                        obj.WrongPersonRecent = (int)reader["WrongPersonRecent"];
+                        obj.LongStay = (int)reader["TotalLongStayCount"];
+                        obj.LongRecent = (int)reader["CurrentLongStayCount"];
+                        obj.WrongPerson = (int)reader["TotalWrongPersonCount"];
+                        obj.WrongPersonRecent = (int)reader["CurrentWrongPersonCount"];
                         Dashboard.Add(obj);
                     }
                 }
