@@ -1,5 +1,9 @@
-﻿var dataInit = [   
+﻿
+
+var dataInit = [   
 ];
+const DATE_OPTIONS = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+
 
 var DashboardApp = React.createClass({
 
@@ -217,6 +221,15 @@ var DashboardApp = React.createClass({
 		return(
 							<div className="DashboardApp">
 			   <div className="row " >
+			   
+				<div className="col-md-12" >
+					<h2  style={{textAlign:"center"}}>Greene County Carson Middle School</h2>
+					<h3 style={{textAlign:"center"}}>
+				{(new Date()).toLocaleDateString('en-US', DATE_OPTIONS)}
+
+					
+					</h3>
+				</div>
 				  <div className="col-md-12 " >
 					 <div className="col-md-8 card" >
 						<div className="row">
