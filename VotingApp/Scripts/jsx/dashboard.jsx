@@ -37,30 +37,31 @@ var DashboardApp = React.createClass({
 	},
 	render: function() {
 		
-        var self = this;
-		 var allProfiles = Object.values(this.state.current_data).map((value) => {
-			 return (
-						  <div className="col-md-6">
+		 var boysprofile = Object.values(this.state.current_data).map((value) => {
+			 return (	
+						   <div className="row">
+						   
+						   {(() => {
+											if (value.RoomType==2) {
+											  return (
+						   
+						  <div className="col-md-12">
 							 <div className="card">
 								<div className="cardcontainer">
 								   <div className="row">
 									  
-										<div className={"col-md-12 " + (value.RoomType==2 ? 'cardpad' : 'cardpadgl')}>
+										<div className="col-md-12 cardpad">
 
-											{(() => {
-											if (value.RoomType==2) {
-											  return (
+											
 													<div className="col-md-2 imgdiv"  style={{background: value.LongRecent  >0 || value.LongStay  >0 || value.WrongPersonRecent  >0 || value.WrongPerson >0 ? '#e94d66' : '#30bea1'}}>
 														<img src="../content/images/boy-icon.png"/>
 													</div>
-												)
-											} 
-											})()}
+											
 											
 											  <div className="col-md-4" >
 												 <br/>
-												 <h4 style={{margin: value.RoomType ==3 ? '10px 10px 0px -40px' : ''}} >{value.FloorName}</h4>
-												 <h5 style={{margin: value.RoomType ==3 ? '10px 10px 0px -40px' : ''}}>UNIQUE: {value.UniqueId}</h5>
+												 <h4>{value.FloorName}</h4>
+												 <h5>UNIQUE: {value.UniqueId}</h5>
 											  </div>
 											  <div className="col-md-2">
 												 <div className="">
@@ -114,21 +115,101 @@ var DashboardApp = React.createClass({
 													<h5 align="center">Wrong Person</h5>
 												 </div>
 											  </div>
-											  
-											  
-											{(() => {
-											if (value.RoomType==3) {
-											  return (
-													 <div className="col-md-2 imgdiv" style={{background: value.LongRecent  >0 || value.LongStay  >0 || value.WrongPersonRecent  >0 || value.WrongPerson >0 ? '#e94d66' : '#30bea1'}}>
-														<img src="../content/images/girl-icon.png"/>
-													</div>
-												)
-											} 
-											})()}
+											
 								   </div>
 								</div>
 							 </div>
 						  </div>
+						</div>
+						)
+											}
+
+												
+											
+											})()}
+						</div>
+			)
+		 });
+		 
+ var girlsprofile = Object.values(this.state.current_data).map((value) => {
+			 return (	
+						   <div className="row">
+						   
+						   {(() => {
+											if (value.RoomType==3) {
+											  return (
+						  <div className="col-md-12">
+							 <div className="card">
+								<div className="cardcontainer">
+								   <div className="row">
+										<div className="col-md-12 cardpadgl">
+											  <div className="col-md-4" >
+												 <br/>
+												 <h4 style={{margin: '10px 10px 0px -40px'}}>{value.FloorName}</h4>
+												 <h5 style={{margin: '10px 10px 0px -40px'}}>UNIQUE: {value.UniqueId}</h5>
+											  </div>
+											  <div className="col-md-2">
+												 <div className="">
+													<h1 className="total" align="center">{value.CurrentCount}</h1>
+													<h5 align="center">Current</h5>
+												 </div>
+											  </div>
+											  <div className="col-md-2">
+												 <div className="vl" align="center">
+													<h1 align="center" className={"" + (value.LongRecent  >0 || value.LongStay  >0 ? 'wrong' : 'green')} >
+														
+														
+														{(() => {
+															if (value.LongStay>0 || value.LongRecent>0) {
+															  return (
+																	<span>{value.LongRecent}<sub>+{value.LongStay}</sub></span>
+																)
+															}
+															else  {
+															  return (
+																	<span>--</span>
+																)
+															}															
+														})()}
+														
+													</h1>
+													<h5 align="center" className="long">Long Stay</h5>
+												 </div>
+											  </div>
+											  <div className="col-md-2">
+												 <div className="vl" align="center">
+													<h1 align="center" className={"" + (value.WrongPerson>0 || value.WrongPersonRecent>0 ? 'wrong' : 'green')} >
+														
+															{(() => {
+															if (value.WrongPerson>0 || value.WrongPersonRecent>0) {
+															  return (
+																	<span>{value.WrongPersonRecent}<sub>+{value.WrongPerson}</sub></span>
+																)
+															}
+															else  {
+															  return (
+																	<span>--</span>
+																)
+															}															
+														})()}
+													
+													</h1>
+													<h5 align="center">Wrong Person</h5>
+												 </div>
+											  </div>
+											  
+											 <div className="col-md-2 imgdiv" style={{background: value.LongRecent  >0 || value.LongStay  >0 || value.WrongPersonRecent  >0 || value.WrongPerson >0 ? '#e94d66' : '#30bea1'}}>
+												<img src="../content/images/girl-icon.png"/>
+											</div>
+											
+								   </div>
+								</div>
+							 </div>
+						  </div>
+						</div>
+						)
+											} 
+											})()}
 						</div>
 			)
 		 });
@@ -137,12 +218,16 @@ var DashboardApp = React.createClass({
 							<div className="DashboardApp">
 			   <div className="row " >
 				  <div className="col-md-12 " >
-					 <div className="col-md-8 card" style={{padding: '0 0 20px 0'}}>
+					 <div className="col-md-8 card" >
 						<div className="row">
-							<div className="col-md-12">
-								{allProfiles}
+							<div className="col-md-6">
+								{boysprofile}
+							</div>
+							<div className="col-md-6">
+								{girlsprofile}
 							</div>
 						  </div>
+						  <div className="row">  <div className="col-md-12 " ><br/></div></div>
 					 </div>
 					 <div className="col-md-4" >
 						<div className="card">
