@@ -18,7 +18,7 @@ namespace VotingApp.Models
             using (var connection = new SqlConnection(ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString))
             {
                 connection.Open();
-                using (var command = new SqlCommand("SELECT * FROM  [dbo].[Activity.BathroomSummaryLog] ORDER BY row_number() OVER (PARTITION BY [RoomTypeID] ORDER BY [RoomTypeID]), [RoomTypeID]", connection))
+                using (var command = new SqlCommand("SELECT * FROM  [dbo].[Activity.BathroomSummaryLog] WHERE IsActive = 1 ORDER BY row_number() OVER (PARTITION BY [RoomTypeID] ORDER BY [RoomTypeID]), [RoomTypeID]", connection))
                 {
                      SqlDataReader reader;
                      reader = command.ExecuteReader();

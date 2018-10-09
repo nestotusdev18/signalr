@@ -167,56 +167,7 @@ var DashboardApp = React.createClass({
 											  <br/> 2mins ago
 										   </div>
 										</div>
-										
-										<div className="m-timeline-2__item">
-										   <span className="m-timeline-2__item-time">
-										   <b>Ground floor</b>
-										   </span>
-										   <div className="m-timeline-2__item-cricle">
-											  <i className="fa fa-circle" style={{color: '#30bea1'}}></i>
-										   </div>
-										   <div className="m-timeline-2__item-text  m--padding-top-5">
-											  Boys Long stay in Bath room
-											  <br/> 2mins ago
-										   </div>
-										</div>
-										<div className="m-timeline-2__item">
-										   <span className="m-timeline-2__item-time">
-										   <b>Ground floor</b>
-										   </span>
-										   <div className="m-timeline-2__item-cricle">
-											  <i className="fa fa-circle" style={{color: '#30bea1'}}></i>
-										   </div>
-										   <div className="m-timeline-2__item-text  m--padding-top-5">
-											  Boys Long stay in Bath room
-											  <br/> 2mins ago
-										   </div>
-										</div>
-										<div className="m-timeline-2__item">
-										   <span className="m-timeline-2__item-time">
-										   <b>Ground floor</b>
-										   </span>
-										   <div className="m-timeline-2__item-cricle">
-											  <i className="fa fa-circle" style={{color: '#30bea1'}}></i>
-										   </div>
-										   <div className="m-timeline-2__item-text  m--padding-top-5">
-											  Boys Long stay in Bath room
-											  <br/> 2mins ago
-										   </div>
-										</div>
-										<div className="m-timeline-2__item">
-										   <span className="m-timeline-2__item-time">
-										   <b>Ground floor</b>
-										   </span>
-										   <div className="m-timeline-2__item-cricle">
-											  <i className="fa fa-circle" style={{color: '#30bea1'}}></i>
-										   </div>
-										   <div className="m-timeline-2__item-text  m--padding-top-5">
-											  Boys Long stay in Bath room
-											  <br/> 2mins ago
-										   </div>
-										</div>
-										
+
 										
 										
 									 </div>
