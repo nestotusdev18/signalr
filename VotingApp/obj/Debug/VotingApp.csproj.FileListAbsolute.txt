@@ -111,8 +111,8 @@ C:\Users\VasanthRaj\source\Workspaces\signalr\VotingApp\bin\System.Web.WebPages.
 C:\Users\VasanthRaj\source\Workspaces\signalr\VotingApp\bin\System.Web.WebPages.Razor.xml
 C:\Users\VasanthRaj\source\Workspaces\signalr\VotingApp\bin\ru-ru\JavaScriptEngineSwitcher.Core.resources.dll
 C:\Users\VasanthRaj\source\Workspaces\signalr\VotingApp\bin\ru-ru\MsieJavaScriptEngine.resources.dll
-C:\Users\VasanthRaj\source\Workspaces\signalr\VotingApp\obj\Debug\VotingApp.csprojAssemblyReference.cache
 C:\Users\VasanthRaj\source\Workspaces\signalr\VotingApp\obj\Debug\VotingApp.csproj.CoreCompileInputs.cache
 C:\Users\VasanthRaj\source\Workspaces\signalr\VotingApp\obj\Debug\VotingApp.csproj.CopyComplete
 C:\Users\VasanthRaj\source\Workspaces\signalr\VotingApp\obj\Debug\VotingApp.dll
 C:\Users\VasanthRaj\source\Workspaces\signalr\VotingApp\obj\Debug\VotingApp.pdb
+C:\Users\VasanthRaj\source\Workspaces\signalr\VotingApp\obj\Debug\VotingApp.csprojAssemblyReference.cache

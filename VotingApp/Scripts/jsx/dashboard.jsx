@@ -220,62 +220,34 @@ var DashboardApp = React.createClass({
 		 
 		return(
 							<div className="DashboardApp">
-			   <div className="row " >
-			   
-				<div className="col-md-12" >
-					<h2  style={{textAlign:"center"}}>Greene County Carson Middle School</h2>
-					<h3 style={{textAlign:"center"}}>
-				{(new Date()).toLocaleDateString('en-US', DATE_OPTIONS)}
-
-					
-					</h3>
+   <div className="row " >
+	 <div className="col-md-12 " >
+	<div className="col-md-12 card"  >
+		<h2  style={{textAlign:"center"}}>Greene County Carson Middle School</h2>
+		<h3 style={{textAlign:"center"}}>
+	{(new Date()).toLocaleDateString('en-US', DATE_OPTIONS)}
+		</h3>
+	</div>
+	 <div className="col-md-2" ></div>
+	 </div>
+	</div>
+	<div className="row " >
+	  <div className="col-md-12 " >
+		 <div className="col-md-12 card" >
+			<div className="row">
+				<div className="col-md-6">
+					{boysprofile}
 				</div>
-				  <div className="col-md-12 " >
-					 <div className="col-md-8 card" >
-						<div className="row">
-							<div className="col-md-6">
-								{boysprofile}
-							</div>
-							<div className="col-md-6">
-								{girlsprofile}
-							</div>
-						  </div>
-						  <div className="row">  <div className="col-md-12 " ><br/></div></div>
-					 </div>
-					 <div className="col-md-4" >
-						<div className="card">
-						   <div className="cardcontainer">
-							  <h4 style={{}}>LIVE STREAM</h4>
-							  <hr/>
-								  
-								  <div className="m-timeline-2">
-									 <div className="m-timeline-2__items  m--padding-top-25 m--padding-bottom-30">
-									 
-										
-										
-										<div className="m-timeline-2__item">
-										   <span className="m-timeline-2__item-time">
-										   <b>Ground floor</b>
-										   </span>
-										   <div className="m-timeline-2__item-cricle">
-											  <i className="fa fa-circle" style={{color: '#30bea1'}}></i>
-										   </div>
-										   <div className="m-timeline-2__item-text  m--padding-top-5">
-											  Boys Long stay in Bath room
-											  <br/> 2mins ago
-										   </div>
-										</div>
-
-										
-										
-									 </div>
-								  </div>
-						   </div>
-						</div>
-					 </div>
-				  </div>
-			   </div>
-			</div>
+				<div className="col-md-6">
+					{girlsprofile}
+				</div>
+			  </div>
+			  <div className="row">  <div className="col-md-12 " ><br/></div></div>
+		 </div>
+		
+	  </div>
+   </div>
+</div>
         );
     }
 
