@@ -219,35 +219,38 @@ var DashboardApp = React.createClass({
 		 });
 		 
 		return(
-							<div className="DashboardApp">
-   <div className="row " >
-	 <div className="col-md-12 " >
-	<div className="col-md-12 card"  >
-		<h2  style={{textAlign:"center"}}>Greene County Carson Middle School</h2>
-		<h3 style={{textAlign:"center"}}>
-	{(new Date()).toLocaleDateString('en-US', DATE_OPTIONS)}
-		</h3>
-	</div>
-	 <div className="col-md-2" ></div>
-	 </div>
-	</div>
-	<div className="row " >
-	  <div className="col-md-12 " >
-		 <div className="col-md-12 card" >
-			<div className="row">
-				<div className="col-md-6">
-					{boysprofile}
+		<div className="DashboardApp">
+			<div className="row " >
+				<div className="col-md-1 " ></div>
+				<div className="col-md-10 " >
+					<div className="col-md-12 card"  >
+						<h2  style={{textAlign:"center"}}>Greene County Carson Middle School</h2>
+						<h3 style={{textAlign:"center"}}>
+						{(new Date()).toLocaleDateString('en-US', DATE_OPTIONS)}
+						</h3>
+					</div>
 				</div>
-				<div className="col-md-6">
-					{girlsprofile}
-				</div>
-			  </div>
-			  <div className="row">  <div className="col-md-12 " ><br/></div></div>
-		 </div>
-		
-	  </div>
-   </div>
-</div>
+				<div className="col-md-1" ></div>
+			</div>
+			
+			<div className="row " >
+				 <div className="col-md-1 " ></div>
+				  <div className="col-md-10 " >
+					 <div className="col-md-12 card" >
+						<div className="row">
+							<div className="col-md-6">
+								{boysprofile}
+							</div>
+							<div className="col-md-6">
+								{girlsprofile}
+							</div>
+						  </div>
+						  <div className="row">  <div className="col-md-12 " ><br/></div></div>
+					 </div>
+				  </div>
+				  <div className="col-md-1 " ></div>
+			</div>
+		</div>
         );
     }
 
