@@ -161,11 +161,17 @@ h5 {
 
 .wrong {
     color: #e94d66;
+	margin-left: 7px;
 }
 
 .green {
     color: #30bea1;
     margin-left: 7px;
+}
+
+.grey {
+    color: #b2b5b4;
+	margin-left: 7px;
 }
 
 

@@ -16,5 +16,6 @@ namespace VotingApp.Models
         public int LongRecent { get; set; }
         public int WrongPerson { get; set; }
         public int WrongPersonRecent { get; set; }
+        public bool IsOffline { get; set; }
     }
 }

@@ -33,6 +33,7 @@ namespace VotingApp.Models
                         obj.LongRecent = (int)reader["CurrentLongStayCount"];
                         obj.WrongPerson = (int)reader["TotalWrongPersonCount"];
                         obj.WrongPersonRecent = (int)reader["CurrentWrongPersonCount"];
+                        obj.IsOffline = (bool)reader["IsOffline"];
                         Dashboard.Add(obj);
                     }
                 }

@@ -57,7 +57,7 @@ var DashboardApp = React.createClass({
 										<div className="col-md-12 cardpad">
 
 											
-													<div className="col-md-2 imgdiv"  style={{background: value.LongRecent  >0 || value.LongStay  >0 || value.WrongPersonRecent  >0 || value.WrongPerson >0 ? '#e94d66' : '#30bea1'}}>
+													<div className="col-md-2 imgdiv"  style={{background: value.IsOffline ? '#b2b5b4' : (value.LongRecent  >0 || value.LongStay  >0 || value.WrongPersonRecent  >0 || value.WrongPerson >0) ? '#e94d66' : '#30bea1'}}>
 														<img src="../content/images/boy-icon.png"/>
 													</div>
 											
@@ -69,13 +69,13 @@ var DashboardApp = React.createClass({
 											  </div>
 											  <div className="col-md-2">
 												 <div className="">
-													<h1 className="total" align="center">{value.CurrentCount}</h1>
+													<h1 align="center" className={"" + (value.IsOffline ? 'grey' : 'total' )}>{value.CurrentCount}</h1>
 													<h5 align="center">Current</h5>
 												 </div>
 											  </div>
 											  <div className="col-md-2">
 												 <div className="vl" align="center">
-													<h1 align="center" className={"" + (value.LongRecent  >0 || value.LongStay  >0 ? 'wrong' : 'green')} >
+													<h1 align="center" className={"" + (value.IsOffline ? 'grey' : (value.LongRecent  >0 || value.LongStay  >0) ? 'wrong' : 'green')} >
 														
 														
 														{(() => {
@@ -100,8 +100,8 @@ var DashboardApp = React.createClass({
 											  </div>
 											  <div className="col-md-2">
 												 <div className="vl" align="center">
-													<h1 align="center" className={"" + (value.WrongPerson>0 || value.WrongPersonRecent>0 ? 'wrong' : 'green')} >
-														
+													<h1 align="center" className={"" + (value.IsOffline ? 'grey' : (value.WrongPerson>0 || value.WrongPersonRecent>0) ? 'wrong' : 'green')} >
+													
 															{(() => {
 															if (value.WrongPerson>0 || value.WrongPersonRecent>0) {
 															  return (
@@ -154,14 +154,13 @@ var DashboardApp = React.createClass({
 											  </div>
 											  <div className="col-md-2">
 												 <div className="">
-													<h1 className="total" align="center">{value.CurrentCount}</h1>
+													<h1 align="center" className={"" + (value.IsOffline ? 'grey' : 'total' )}>{value.CurrentCount}</h1>
 													<h5 align="center">Current</h5>
 												 </div>
 											  </div>
 											  <div className="col-md-2">
 												 <div className="vl" align="center">
-													<h1 align="center" className={"" + (value.LongRecent  >0 || value.LongStay  >0 ? 'wrong' : 'green')} >
-														
+													<h1 align="center" className={"" + (value.IsOffline ? 'grey' : (value.LongRecent  >0 || value.LongStay  >0) ? 'wrong' : 'green')} >	
 														
 														{(() => {
 															if (value.LongStay>0 || value.LongRecent>0) {
@@ -182,8 +181,7 @@ var DashboardApp = React.createClass({
 											  </div>
 											  <div className="col-md-2">
 												 <div className="vl" align="center">
-													<h1 align="center" className={"" + (value.WrongPerson>0 || value.WrongPersonRecent>0 ? 'wrong' : 'green')} >
-														
+													<h1 align="center" className={"" + (value.IsOffline ? 'grey' : (value.WrongPerson>0 || value.WrongPersonRecent>0) ? 'wrong' : 'green')} >	
 															{(() => {
 															if (value.WrongPerson>0 || value.WrongPersonRecent>0) {
 															  return (
@@ -202,7 +200,7 @@ var DashboardApp = React.createClass({
 												 </div>
 											  </div>
 											  
-											 <div className="col-md-2 imgdiv" style={{background: value.LongRecent  >0 || value.LongStay  >0 || value.WrongPersonRecent  >0 || value.WrongPerson >0 ? '#e94d66' : '#30bea1'}}>
+											 <div className="col-md-2 imgdiv" style={{background: value.IsOffline ? '#b2b5b4' : (value.LongRecent  >0 || value.LongStay  >0 || value.WrongPersonRecent  >0 || value.WrongPerson >0) ? '#e94d66' : '#30bea1'}}>
 												<img src="../content/images/girl-icon.png"/>
 											</div>
 											
