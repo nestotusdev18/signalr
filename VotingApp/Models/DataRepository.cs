@@ -14,7 +14,7 @@ namespace VotingApp.Models
        
         public List<Dashboard> GetDashboard(int SchoolId)
         {
-            SchoolId = 1;
+            //SchoolId = 1;
             List<Dashboard> Dashboard = new List<Dashboard>();
             using (var connection = new SqlConnection(ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString))
             {

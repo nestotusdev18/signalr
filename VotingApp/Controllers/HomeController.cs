@@ -13,6 +13,7 @@ namespace VotingApp.Controllers
 
         public ActionResult Index()
         {
+            ViewBag.SchoolID = 1;
             return View();
         }
 
