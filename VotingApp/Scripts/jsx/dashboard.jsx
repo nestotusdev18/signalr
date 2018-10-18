@@ -1,8 +1,7 @@
-﻿
-
-var dataInit = [   
+﻿var dataInit = [   
 ];
 const DATE_OPTIONS = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+var  SCHOOL_NAME =  $('#hdnSchoolName').val();
 
 
 var DashboardApp = React.createClass({
@@ -14,7 +13,6 @@ var DashboardApp = React.createClass({
     },
 	componentDidMount: function() {
 		var self = this;
-
 		$.ajax({
 			url: this.props.url,
 			dataType: 'json',
@@ -40,7 +38,7 @@ var DashboardApp = React.createClass({
 
 	},
 	render: function() {
-		
+		  
 		 var boysprofile = Object.values(this.state.current_data).map((value) => {
 			 return (	
 						   <div className="row">
@@ -58,7 +56,7 @@ var DashboardApp = React.createClass({
 
 											
 													<div className="col-md-2 imgdiv"  style={{background: value.IsOffline ? '#b2b5b4' : (value.LongRecent  >0 || value.LongStay  >0 || value.WrongPersonRecent  >0 || value.WrongPerson >0) ? '#e94d66' : '#30bea1'}}>
-														<img src="../content/images/boy-icon.png"/>
+														<img src="../content/images/boy-icon.png"/> 
 													</div>
 											
 											
@@ -214,6 +212,8 @@ var DashboardApp = React.createClass({
 											})()}
 						</div>
 			)
+			
+			
 		 });
 		 
 		return(
@@ -222,7 +222,7 @@ var DashboardApp = React.createClass({
 				<div className="col-md-1 " ></div>
 				<div className="col-md-10 " >
 					<div className="col-md-12 card"  >
-						<h2  style={{textAlign:"center"}}>Greene County Carson Middle School</h2>
+						<h2  style={{textAlign:"center"}}>{SCHOOL_NAME}</h2>
 						<h3 style={{textAlign:"center"}}>
 						{(new Date()).toLocaleDateString('en-US', DATE_OPTIONS)}
 						</h3>
@@ -230,7 +230,6 @@ var DashboardApp = React.createClass({
 				</div>
 				<div className="col-md-1" ></div>
 			</div>
-			
 			<div className="row " >
 				 <div className="col-md-1 " ></div>
 				  <div className="col-md-10 " >
