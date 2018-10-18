@@ -19,12 +19,9 @@ namespace VotingApp.Controllers
         public JsonResult Datacount()
         {
             DataRepository cmd = new DataRepository();
-            DataObject = cmd.GetDashboard();
+            DataObject = cmd.GetDashboard(1);
             return Json(DataObject, JsonRequestBehavior.AllowGet);
         }
-
-
-      
 
         public ActionResult Crawl()
         {
