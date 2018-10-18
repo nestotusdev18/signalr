@@ -12,7 +12,7 @@ namespace VotingApp.Models
     public class DataRepository 
     {
        
-        public List<Dashboard> GetDashboard(int SchoolId = 0)
+        public List<Dashboard> GetDashboard(int SchoolId)
         {
             //SchoolId = 1;
             List<Dashboard> Dashboard = new List<Dashboard>();

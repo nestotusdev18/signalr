@@ -16,7 +16,7 @@ namespace VotingApp
     {
         public List<Dashboard> DataObject { get; private set; }
 
-        public void Send(int SchoolId = 0)
+        public void Send(int SchoolId)
         {
             DataRepository cmd = new DataRepository();
             DataObject = cmd.GetDashboard(SchoolId);
