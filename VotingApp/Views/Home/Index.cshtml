@@ -21,8 +21,9 @@
 	
 		setInterval(function() {
 		 var vhub = $.connection.votingHub;
+		 $.connection.votingHub.qs = { 'ClientType': 'WebUser'};
 		  $.connection.hub.start().done(function () {
-			vhub.server.send($('#hdnSchoolId').val());
+			vhub.server.send(1);
 		 });
 		}, 2000);
 
