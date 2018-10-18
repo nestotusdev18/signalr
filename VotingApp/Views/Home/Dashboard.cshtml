@@ -21,7 +21,7 @@
 			setInterval(function() {
 			 var vhub = $.connection.votingHub;
 			  $.connection.hub.start().done(function () {
-				vhub.server.send();
+				vhub.server.send(1);
 			 });
 			
 			}, 5000);

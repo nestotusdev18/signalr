@@ -16,10 +16,10 @@ namespace VotingApp
     {
         public List<Dashboard> DataObject { get; private set; }
 
-        public void Send()
+        public void Send(int SchoolId = 0)
         {
             DataRepository cmd = new DataRepository();
-            DataObject = cmd.GetDashboard();
+            DataObject = cmd.GetDashboard(SchoolId);
             Clients.All.showLiveResult(JsonConvert.SerializeObject(DataObject));
         }
 

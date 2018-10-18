@@ -12,13 +12,13 @@ namespace VotingApp.Models
     public class DataRepository 
     {
        
-        public List<Dashboard> GetDashboard()
+        public List<Dashboard> GetDashboard(int SchoolId = 0)
         {
             List<Dashboard> Dashboard = new List<Dashboard>();
             using (var connection = new SqlConnection(ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString))
             {
                 connection.Open();
-                using (var command = new SqlCommand(" SELECT * FROM  [dbo].[Activity.BathroomSummaryLog] WHERE IsActive = 1 ORDER BY row_number() OVER (PARTITION BY [RoomTypeID] ORDER BY [RoomTypeID]), [RoomTypeID]", connection))
+                using (var command = new SqlCommand(" SELECT * FROM  [dbo].[Activity.BathroomSummaryLog] WHERE SchoolID=" + SchoolId + " AND IsActive = 1 ORDER BY row_number() OVER (PARTITION BY [RoomTypeID] ORDER BY BathroomSummaryLogID, [RoomTypeID]), [RoomTypeID]", connection))
                 {
                      SqlDataReader reader;
                      reader = command.ExecuteReader();
