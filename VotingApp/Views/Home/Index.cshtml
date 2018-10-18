@@ -19,13 +19,12 @@
 <script src="~/Scripts/jsx/dashboard.jsx?v2"></script>
  <script>
 	$(document).ready(function () {
-		var hdnSchoolId = parseInt($('#hdnSchoolId').val());
 		var hdnSchoolName =$('#hdnSchoolName').val();
 	
 		setInterval(function() {
 		 var vhub = $.connection.votingHub;
 		  $.connection.hub.start().done(function () {
-			vhub.server.send(1);
+			vhub.server.send($('#hdnSchoolId').val());
 		 });
 		}, 2000);
 
