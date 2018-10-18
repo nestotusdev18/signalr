@@ -39,10 +39,10 @@ namespace VotingApp.Controllers.Api
 
         [Route("send")]
         [HttpPost]
-        public void Send()
+        public void Send(int SchoolId)
         {
             VotingHub cmd = new VotingHub();
-            cmd.Send();
+            cmd.Send(SchoolId);
         }
 
     }

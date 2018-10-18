@@ -7,9 +7,6 @@
 
 <div id="container" style="width:98%;"></div>
 @section scripts {
-
-
-
 <!--Script references. -->
 <!--The jQuery library is required and is referenced by default in _Layout.cshtml. -->
 <!--Reference the SignalR library. -->
@@ -18,10 +15,11 @@
 <script src="~/signalr/hubs"></script>
 <script src="~/Scripts/react/react-0.12.2.min.js"></script>
 <script src="~/Scripts/jsx/dashboard.jsx?v2"></script>
+}
+
  <script>
 	$(document).ready(function () {
 		var hdnSchoolName =$('#hdnSchoolName').val();
-	
 		setInterval(function() {
 		 var vhub = $.connection.votingHub;
 		  $.connection.hub.start().done(function () {
@@ -31,4 +29,3 @@
 
 	});
 </script>
-}
