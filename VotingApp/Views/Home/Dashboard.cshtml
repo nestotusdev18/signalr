@@ -23,7 +23,7 @@
 		setInterval(function() {
 		 var vhub = $.connection.votingHub;
 		  $.connection.hub.start().done(function () {
-			vhub.server.send(hdnSchoolId);
+			vhub.server.send(@ViewBag.SchoolID);
 		 });
 		}, 2000);
 

@@ -20,7 +20,6 @@ namespace VotingApp
         public void Send(int SchoolId)
         {
             DataRepository cmd = new DataRepository();
-            Debug.WriteLine("SchoolId-" + SchoolId);
             DataObject = cmd.GetDashboard(SchoolId);
             Clients.All.showLiveResult(JsonConvert.SerializeObject(DataObject));
         }
