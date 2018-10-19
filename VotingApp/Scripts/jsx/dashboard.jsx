@@ -55,12 +55,12 @@ var DashboardApp = React.createClass({
 										<div className="col-md-12 cardpad">
 
 											
-													<div className="col-md-2 imgdiv"  style={{background: value.IsOffline ? '#b2b5b4' : (value.LongRecent  >0 || value.LongStay  >0 || value.WrongPersonRecent  >0 || value.WrongPerson >0) ? '#e94d66' : '#30bea1'}}>
-														<img src="../content/images/boy-icon.png"/> 
-													</div>
+											<div className="col-md-2 imgdiv"  style={{background: value.IsOffline ? '#b2b5b4' : (value.LongRecent  >0 || value.LongStay  >0 || value.WrongPersonRecent  >0 || value.WrongPerson >0) ? '#e94d66' : '#30bea1'}}>
+												<img src="../content/images/boy-icon.png"/> 
+											</div>
 											
 											
-											  <div className="col-md-4" >
+											  <div className="col-md-3" >
 												 <br/>
 												 <h4>{value.FloorName}</h4>
 												 <h5>UNIQUE: {value.UniqueId}</h5>
@@ -96,7 +96,7 @@ var DashboardApp = React.createClass({
 													<h5 align="center" className="long">Long Stay</h5>
 												 </div>
 											  </div>
-											  <div className="col-md-2">
+											  <div className="col-md-3">
 												 <div className="vl" align="center">
 													<h1 align="center" className={"" + (value.IsOffline ? 'grey' : (value.WrongPerson>0 || value.WrongPersonRecent>0) ? 'wrong' : 'green')} >
 													
@@ -145,7 +145,7 @@ var DashboardApp = React.createClass({
 								<div className="cardcontainer">
 								   <div className="row">
 										<div className="col-md-12 cardpadgl">
-											  <div className="col-md-4" >
+											  <div className="col-md-3" >
 												 <br/>
 												 <h4 style={{margin: '10px 10px 0px -40px'}}>{value.FloorName}</h4>
 												 <h5 style={{margin: '10px 10px 0px -40px'}}>UNIQUE: {value.UniqueId}</h5>
@@ -177,7 +177,7 @@ var DashboardApp = React.createClass({
 													<h5 align="center" className="long">Long Stay</h5>
 												 </div>
 											  </div>
-											  <div className="col-md-2">
+											  <div className="col-md-3">
 												 <div className="vl" align="center">
 													<h1 align="center" className={"" + (value.IsOffline ? 'grey' : (value.WrongPerson>0 || value.WrongPersonRecent>0) ? 'wrong' : 'green')} >	
 															{(() => {
